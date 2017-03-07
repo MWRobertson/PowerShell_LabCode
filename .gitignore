@@ -126,6 +126,9 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+# VS Code Debug log
+debug.log
+
 
 #############
 ## Python
