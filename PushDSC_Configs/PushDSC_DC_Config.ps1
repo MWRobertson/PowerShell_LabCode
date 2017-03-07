@@ -1,5 +1,3 @@
-Install-Module -Name xSmbShare -Force -Verbose
-
 Configuration DCConfig {
 
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
@@ -83,6 +81,8 @@ Configuration DCConfig {
         }
     }
 }
+
+Install-Module -Name xSmbShare -Force -Verbose
 
 DCConfig -Output "C:\DSCConfigs"
 Start-DscConfiguration -Wait -Verbose -ComputerName localhost -Path C:\DSCConfigs
