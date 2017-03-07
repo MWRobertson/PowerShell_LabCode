@@ -25,6 +25,15 @@ Configuration BaseBuildConfig {
             Ensure = "Present"
         }
 
+        File Scripts
+        # Configure folder for common scripts
+        {
+            Type = "Directory"
+            DestinationPath = "C:\SrvCust\Scripts"
+            Ensure = "Present"
+            DependsOn = "[File]SrvCust"
+        }
+
         File CTemp
         # Configure TEMP folder
         {
@@ -49,6 +58,16 @@ Configuration BaseBuildConfig {
             Name = "TMP"
             Value = "C:\TEMP"
             DependsOn = "[File]CTemp"
+        }
+
+        Environment PATH
+        # Append scripts folder to PATH
+        {
+            Ensure = "Present"
+            Name = "PATH"
+            Path = $TRUE
+            Value = "C:\SrvCust\Scripts"
+            DependsOn = "[File]Scripts"
         }
 
         xTimeZone TZ
