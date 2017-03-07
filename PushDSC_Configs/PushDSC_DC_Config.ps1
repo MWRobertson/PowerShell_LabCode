@@ -1,6 +1,6 @@
 Configuration DCConfig {
 
-    Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DscResource -Name MSFT_xSmbShare
 
     node localhost{

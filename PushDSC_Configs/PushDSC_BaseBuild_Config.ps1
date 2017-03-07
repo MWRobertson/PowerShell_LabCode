@@ -1,6 +1,6 @@
 Configuration BaseBuildConfig {
 
-    Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DscResource -Name MSFT_xSmbShare
     Import-DscResource -Name xTimeZone
 
