@@ -11,6 +11,12 @@ Configuration DCConfig {
             Ensure = "Present"
         }
 
+        WindowsFeature Backup 
+        {
+            Ensure = "Present"
+            Name = "Windows-Server-Backup"
+        }
+
         File SPAFolder 
         # Configure an empty share with Administrators read permission for SPA to collect performance data
         {
