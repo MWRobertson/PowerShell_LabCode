@@ -1,8 +1,8 @@
 Configuration BaseBuildConfig {
 
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-    Import-DscResource -Name MSFT_xSmbShare
-    Import-DscResource -Name xTimeZone
+    Import-DscResource -Name MSFT_xSmbShare -ModuleVersion "2.0.0.0"
+    Import-DscResource -Name xTimeZone -ModuleVersion "1.6.0.0"
 
     node localhost{
 
