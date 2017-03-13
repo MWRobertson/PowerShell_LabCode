@@ -5,6 +5,8 @@
  Windows 2016 Preview, and CentOS. Prerequisites include ISOs for each operating system's install media
  and virtual floppy disks containing answer files (if an unattended installation is desired.)
 
+ Also included are some scripts for using PowerShell DSC. These include push configurations, scripts to stand up a DSC pull server, and examples of both standard pull configs and partial pull configs. 
+
  This code is shared here strictly as-is. It's unoptimized, unfinished, and tailored specifically
  to my working environment. Please feel free to use it as a reference for developing your own lab
  code that best fits your needs. 
