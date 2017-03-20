@@ -1,4 +1,4 @@
 function New-Widget {
     $Var5 = Add-Widget
-    "This is $Var5"
+    "Var5 is $Var5"
 }
