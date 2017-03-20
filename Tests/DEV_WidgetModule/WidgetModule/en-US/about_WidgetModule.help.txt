@@ -1,0 +1,11 @@
+PSTOPIC
+    about_WidgetModule
+
+SHORT DESCRIPTION
+    A module for testing module creation.
+
+LONG DESCRIPTION
+    A module for testing module creation.
+
+DETAILED DESCRIPTION
+    Learning to properly author modules with a module. 

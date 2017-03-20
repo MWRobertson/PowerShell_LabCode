@@ -1,0 +1,3 @@
+﻿function Test-PesterExample {
+    "Hello"
+}
