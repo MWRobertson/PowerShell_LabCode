@@ -14,5 +14,4 @@
         }
     }
 
-# Remove once manifest is complete
-Export-ModuleMember -Function $Public.Basename
+#Export-ModuleMember -Function $Public.Basename
