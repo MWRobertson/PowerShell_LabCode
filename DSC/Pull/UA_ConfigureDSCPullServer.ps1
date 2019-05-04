@@ -1,4 +1,4 @@
-﻿configuration Sample_xDscPullServer
+﻿configuration Config-MikeLabPullServer
 { 
     param  
     ( 
@@ -9,7 +9,7 @@
 
             [Parameter(Mandatory)]
             [ValidateNotNullOrEmpty()]
-            [string] $RegistrationKey 
+            [string] $registrationKey 
      ) 
 
 
@@ -43,10 +43,13 @@
             Ensure          = 'Present'
             Type            = 'File'
             DestinationPath = "$env:ProgramFiles\WindowsPowerShell\DscService\RegistrationKeys.txt"
-            Contents        = $RegistrationKey
+            Contents        = $registrationKey
         }
     }
 }
 
-Sample_xDSCPullServer -certificateThumbprint 'DDDD417BAA7A9D2D284F53F7B9285F5628B8289A' -RegistrationKey 'b260b714-a6d9-452c-8dcb-bf021b6cff06' -OutputPath c:\DSCConfigs\PullServer
+$certificateThumbprint = 'DDDD417BAA7A9D2D284F53F7B9285F5628B8289A'
+$registrationKey = 'b260b714-a6d9-452c-8dcb-bf021b6cff06'
+
+Config-MikeLabPullServer -certificateThumbprint $certificateThumbprint -RegistrationKey $registrationKey -OutputPath c:\DSCConfigs\PullServer
 Start-DscConfiguration -Path c:\DSCConfigs\PullServer -Wait -Verbose -Force
