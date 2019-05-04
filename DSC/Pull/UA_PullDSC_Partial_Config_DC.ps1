@@ -1,4 +1,4 @@
-﻿Configuration DSCDCConfig
+﻿Configuration Config-DomainController
 {
 
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
@@ -83,8 +83,8 @@
     }
 }
 
-DSCDCConfig -OutPut "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
-Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCDCConfig.mof"
-Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCDCConfig.mof.checksum"
-Rename-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\localhost.mof" "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCDCConfig.mof"
+Config-DomainController -OutPut "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
+Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-DomainController.mof"
+Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-DomainController.mof.checksum"
+Rename-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\localhost.mof" "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-DomainController.mof"
 New-DscCheckSum -Path "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" -Force
