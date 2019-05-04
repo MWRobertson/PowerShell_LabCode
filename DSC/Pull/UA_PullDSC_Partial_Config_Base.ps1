@@ -1,4 +1,4 @@
-﻿Configuration DSCBaseConfig
+﻿Configuration Config-BaseServer
 {
 
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
@@ -74,8 +74,8 @@
     }
 }
 
-DSCBaseConfig -OutPut "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
-Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCBaseConfig.mof"
-Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCBaseConfig.mof.checksum"
-Rename-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\localhost.mof" "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\DSCBaseConfig.mof"
+Config-BaseServer -OutPut "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
+Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-BaseServer.mof"
+Remove-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-BaseServer.mof.checksum"
+Rename-Item "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\localhost.mof" "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration\Config-BaseServer.mof"
 New-DscCheckSum -Path "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" -Force
