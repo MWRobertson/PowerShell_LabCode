@@ -1,0 +1,1 @@
+Get-VM | Select VMName, State, Uptime
